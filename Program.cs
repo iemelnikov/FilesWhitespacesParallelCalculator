@@ -49,7 +49,7 @@ namespace FilesWhitespacesParallelCalculator
                     {
                         string fileContent = File.ReadAllText(filePathToProcess); // Содержимое файла в текстовом виде
                         int whitespacesCount = fileContent.Count(_ => _ == ' '); // Количество пробелов в файле
-                        Console.WriteLine($"Whitespaces count for file {filePathToProcess}: {whitespacesCount}");
+                        Console.WriteLine($"Whitespaces count for file {filePathToProcess}: {whitespacesCount}; thread {Environment.CurrentManagedThreadId}");
                     }
                     catch (Exception ex)
                     {
